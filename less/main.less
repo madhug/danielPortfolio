@@ -1,0 +1,118 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+
+body {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+h1,
+h3, 
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a {
+    font-weight: 200;   
+}
+
+h2 {
+    font-weight: 400;   
+}
+
+
+
+.page {
+    width: 100%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    height: 30px;
+    margin-bottom: 0;
+    background: url('../public/noise.png') repeat left top;
+        background-color: #1a1a1a;
+    border: none;
+    
+    .fa-bars {
+        float: right; 
+        padding: 10px 25px;             color: white;
+        opacity: 0.4;
+    }
+}
+
+.about {
+
+    .header {
+        margin-top: 50px;
+        height: 530px;
+        
+        background: url('../public/noise.png') repeat left top;
+        background-color: #1a1a1a;
+        text-align: center;
+        color: #eee;
+        .for-links {
+            margin-top: 35px;
+        }
+    }
+    
+    h1 {
+        font-weight: 400;
+        font-size: 14vw;
+        margin-top: 5px;
+    }
+    
+    .logo {
+        width: 65vw;
+        margin: 15px auto 50px auto;
+        opacity: 0.1;
+    }
+    
+    p {
+        font-size: 5.5vw;
+        margin: 0;
+        opacity: 0.8;
+    }
+
+    .content {
+        height: 530px;
+        background-color: white;
+        margin-bottom: 30px;
+        
+        .text-block {
+            margin: 40px 30px 40px 15px;
+            padding-left: 14px;
+            border-left: 1px solid #1a1a1a;
+        }
+        
+        p {
+            font-size: 1.2em;
+        }
+        
+        .graph {
+            div.graph-label {
+                width: 35%;
+                display: inline-block;
+            }
+            
+            span.square {
+                width: 10px;
+                height: 10px;
+                background-color: red;
+                display: inline-block;
+                margin-right: 2px;
+            }
+        }
+    }
+
+    .footer {
+        height: 30px;
+        position: absolute;
+        bottom: 0px;
+        background-color: red;
+    }
+}
