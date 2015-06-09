@@ -1,28 +1,40 @@
+/*
+BOOTSTRAP QUERIES
+Extra small devices (phones, less than 768px)
+
+Small devices (tablets, 768px and up)
+@media (min-width: @screen-sm-min) { ... }
+
+Medium devices (desktops, 992px and up)
+@media (min-width: @screen-md-min) { ... }
+
+Large devices (large desktops, 1200px and up)
+@media (min-width: @screen-lg-min) { ... }
+
+@media (max-width: @screen-xs-max) { ... }
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
+@media (min-width: @screen-lg-min) { ... }
+*/
+
 @import "../bower_components/bootstrap/less/bootstrap.less";
 
 body {
     font-family: 'Dosis', sans-serif;
     font-weight: 200;
     font-size: 14px;
+    background: url('../public/noise.png') repeat left top;
+    background-color: #1a1a1a;
+    background-attachment: fixed;
 }
 
-h1,
-h3, 
-h4,
-h5,
-h6,
-p,
-div,
-span,
-a {
+h1, h3, h4, h5, h6, p, div, span, a {
     font-weight: 200;   
 }
 
 h2 {
-    font-weight: 400;   
+    font-weight: 400;
 }
-
-
 
 .page {
     width: 100%;
@@ -34,85 +46,306 @@ h2 {
 .navbar {
     height: 30px;
     margin-bottom: 0;
-    background: url('../public/noise.png') repeat left top;
-        background-color: #1a1a1a;
+    background: transparent;
     border: none;
-    
     .fa-bars {
         float: right; 
-        padding: 10px 25px;             color: white;
-        opacity: 0.4;
+        padding: 10px 25px;
+        color: white;
+        opacity: 0.6;
+        text-shadow: 0px 1px 2px black;
+    }
+}
+
+.carousel-control.right {
+    background-image: none;
+    .glyphicon-chevron-right {
+        right: 30%;
+    }
+}
+
+.carousel-control.left {
+    background-image: none;
+    .glyphicon-chevron-left {
+        left: 30%;
+    }
+}
+
+.carousel-indicators {
+    bottom: -30px;
+    li {
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        border: 1px solid #1a1a1a;
+        opacity: 0.6;
+    }
+    .active {
+        width: 7px;
+        height: 7px;
+        background-color: #1a1a1a;
+    }
+}
+
+.page {
+    .header {
+        margin: 6vh auto 40px auto;
+        color: #fff;
+    }
+    .content {
+        background-color: white;
+        margin-bottom: 80px;
+        box-shadow: 0px 2px 4px #000;
+        -webkit-box-shadow: 0px 2px 4px #000;
+        z-index: 100;
+        .text-block {
+            position: relative;
+            border-left: 1px solid #1a1a1a;
+            margin-bottom: 40px;
+            padding-left: 15px;
+            h2:first-of-type {
+                margin-top: 0px;
+            }
+        }
+        p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        p + p {
+            margin-top: 10px;
+        }
     }
 }
 
 .about {
-
     .header {
-        margin-top: 50px;
-        height: 530px;
-        
-        background: url('../public/noise.png') repeat left top;
-        background-color: #1a1a1a;
         text-align: center;
-        color: #eee;
+        .logo {
+            width: 100%;
+            height: 100%;
+            max-height: 20vh;
+            max-width: 60vw;
+            margin: 0px auto 2vh auto;
+            opacity: 0.1;
+        }
+        h1 {
+            font-weight: 400;
+            font-size: 12vmin;
+            margin-top: 5px;
+        }
+        p {
+            font-size: 5.5vmin;
+            margin: 0;
+            opacity: 0.8;
+        }
+        .dcIcon {
+            max-height: 20vh;
+            max-width: 80%;
+        }
         .for-links {
-            margin-top: 35px;
+            margin-top: 5vh;
+            a{
+                color: #eee;
+            }
         }
     }
-    
-    h1 {
-        font-weight: 400;
-        font-size: 14vw;
-        margin-top: 5px;
+    @media (min-width: @screen-sm-min) {
+        .header {
+            .logo {
+                max-height: 20vh;
+                max-width: 40vw;
+            }
+            .dcIcon {
+                max-width: 50%;
+            }
+        }
     }
-    
-    .logo {
-        width: 65vw;
-        margin: 15px auto 50px auto;
-        opacity: 0.1;
+    @media (min-width: @screen-md-min ){
+        .header {
+            .logo {
+                max-height: 20vh;
+                max-width: 65vw;
+            }
+            h1 {
+                font-size: 12vmin;
+            }
+            p {
+                font-size: 5.5vmin;
+            }
+            .dcIcon {
+                max-width: 40%;
+            }
+        }
     }
-    
-    p {
-        font-size: 5.5vw;
-        margin: 0;
-        opacity: 0.8;
-    }
-
     .content {
-        height: 530px;
-        background-color: white;
-        margin-bottom: 30px;
-        
         .text-block {
             margin: 40px 30px 40px 15px;
-            padding-left: 14px;
-            border-left: 1px solid #1a1a1a;
+            p {
+                margin-bottom: 40px; 
+            }
         }
-        
-        p {
-            font-size: 1.2em;
-        }
-        
         .graph {
             div.graph-label {
                 width: 35%;
                 display: inline-block;
             }
-            
             span.square {
                 width: 10px;
                 height: 10px;
-                background-color: red;
+                background-color: #1a1a1a;
                 display: inline-block;
                 margin-right: 2px;
             }
+            .photoshop span.square {
+                background-color: #00a4e4;
+            }
+            .illustrator span.square {
+                background-color: #fbb034;
+            }
+            .dreamweaver span.square {
+                background-color: #c1d82f;
+            }
+            .indesign span.square {
+                background-color: #924984;
+            }
+            .fireworks span.square {
+                background-color: #ffdd00;
+            }
+            .flash span.square {
+                background-color: #ff0000;
+            }
+            .cocos span.square {
+                background-color: #8c6239;
+            }
+            .html-graph span.square {
+                background-color: #f14a29;
+            }
+            .css-graph span.square {
+                background-color: #0070bb;
+            }
+            .jquery-graph span.square {
+                background-color: #78cff5;
+            }
+            .bootstrap-graph span.square {
+                background-color: #5c4384;
+            }
+            .js-graph span.square {
+                background-color: #d6ba33;
+            }
+            .angularjs span.square {
+                background-color: #a6120d;
+            }
+        }
+        .resume-btn {
+            height: 80px;
+            text-align: center;
+            vertical-align: bottom;
+            background: #777;
+            a {
+                font-size: 5vw;
+                color: #fff;
+                width: 100%;
+                img {
+                    height: 100%;
+                    position: relative;
+                }
+            }
+        }
+        @media (min-width: @screen-md-min) {
+            .resume-btn {
+                height: 60px;
+                a {
+                    font-size: 2vw;
+                }
+            }
         }
     }
+}
 
-    .footer {
-        height: 30px;
-        position: absolute;
-        bottom: 0px;
-        background-color: red;
+.uidesign, .printdesign, .artwork, .process {
+    .header {
+        min-height: 305px;
+        position: relative;
+        .splash {
+            height: 100vmin;
+            max-height: 70vh;
+            width: 90%;
+            margin: 30px auto;
+            position: relative;
+        }
+        h1 {
+            font-size: 14vmin;
+            position: absolute;
+            bottom: 2vh;
+            right: 8vw;
+        }
+        @media (min-width: @screen-md-min) {
+            h1 {
+                font-size: 10vmin;
+            }
+        }
+    }
+    .content {
+        .row {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            .dc-item {
+                text-align: center;
+                img{max-width: 100%;}
+            }
+        }
+        @media (min-width: @screen-md-min) {
+            .dc-text {
+                float: right;
+            }
+        }
+    }
+}
+
+.uidesign {
+    .header {
+        .splash {
+            background: url("../public/uiSplash.png") no-repeat center top;
+            background-size: contain;
+        }
+    }
+}
+
+.printdesign {
+    .header {
+        .splash {
+            background: url("../public/printSplash.png") no-repeat center top;
+            background-size: contain;
+        }
+    }
+}
+
+.artwork {
+    .header {
+        .splash {
+            background: url("../public/artSplash.png") no-repeat center top;
+            background-size: contain;
+        }
+    }
+}
+
+.process {
+    .header {
+        .splash {
+            background: url("../public/processSplash.png") no-repeat center top;
+            background-size: contain;
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    bottom: 20px;
+    width: 100vw;
+    color: #fff;
+    p {
+        font-size: 1em;
     }
 }

@@ -20,34 +20,45 @@
                 <img src="../public/dcLogoBlack.svg" class="hidden" style="float: left;"/>
                 <i class="fa fa-bars fa-2x" style=""></i>
             </div>
-            <div class="header container">
+            <div class="header container-fluid">
                 <img src="../public/dcLogoWhite.svg" class="logo" />
                 <p>Hi, I'm Daniel Campbell and I create</p>
                 <h1>VISUAL DESIGNS</h1>
                 <p class="for-links">for</p>
                 <div class="row for-links">
                     <div class="col-xs-4">
-                        <i class="fa fa-file-o fa-3x"></i>
-                        <p>UI</p>
+                        <a href="uidesign">
+                            <img class="dcIcon" src="../public/icon_ui.svg" alt="UI Icon">
+                            <p>UI</p>
+                        </a>
                     </div>
                     <div class="col-xs-4">
-                        <i class="fa fa-file-o fa-3x"></i>
-                        <p>print</p>
+                        <a href="print">
+                            <img class="dcIcon" src="../public/icon_print.svg" alt="Print Icon">
+                            <p>print</p>
+                        </a>
                     </div>
                     <div class="col-xs-4">
-                        <i class="fa fa-file-o fa-3x"></i>
-                        <p>&more</p>
+                        <a href="other">
+                            <img class="dcIcon" src="../public/icon_other.svg"
+                                 alt="Other Icon">
+                            <p>&amp; more</p>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="content container">
-                <div class=text-block>
-                    <h2>About Me</h2>
-                    <p>
+            
+            <div class="content container-fluid">
+                <div class="text-block row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
+                        <h2>About Me</h2>
+                        <p>
                         I'm a graphic designer proficient in both print and interactive design. I'm a front-end developer, and I'm a marketer. I have experience working both in a team as an in-house designer as well as on my own and in collaborations as a freelancer. My experience with marketing research gives me insight into how best to tailor my designs to meet the needs of the end-user; while my experience with code and development helps me bridge the gap often found between design and development teams. My passion for design extends beyond the office; I always new ideas brewing and personal projects that help me grow as a designer.
-                    </p>
+                        </p>
+                    </div>
                     
-                    <h2>My Skill Set</h2>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <h2>My Skill Set</h2>
                         <div class="graph">
                             <div class="photoshop">
                                 <div class="graph-label">Photoshop</div>
@@ -90,10 +101,15 @@
                                 <div class="graph-label">AngularJS</div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="resume-btn row">
+                    <a href="../public/resume.pdf"  class="col-xs-12"><img src="../public/resumeIcon.svg" alt="Resume Icon">Download Resume (PDF)</a>
                 </div>
             </div>
-            <div class="footer">
-            </div>
         </div>
+        <footer class="footer">
+            <p>Copyright 2015 Daniel Campbell</p>
+        </footer>
     </body>
 </html>
