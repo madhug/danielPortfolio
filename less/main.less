@@ -87,10 +87,17 @@ h2 {
     }
 }
 
+.carousel-inner {
+    .active {
+        
+    }
+}
+
 .page {
     .header {
         margin: 6vh auto 40px auto;
         color: #fff;
+        text-align: center;
     }
     .content {
         background-color: white;
@@ -117,9 +124,8 @@ h2 {
     }
 }
 
-.about {
+.about, .contact {
     .header {
-        text-align: center;
         .logo {
             width: 100%;
             height: 100%;
@@ -128,6 +134,59 @@ h2 {
             margin: 0px auto 2vh auto;
             opacity: 0.1;
         }
+    }
+}
+
+.uidesign, .printdesign, .artwork, .process {
+    .header {
+        min-height: 305px;
+        position: relative;
+        .splash {
+            height: 100vmin;
+            max-height: 70vh;
+            width: 90%;
+            margin: 30px auto;
+            position: relative;
+        }
+        h1 {
+            font-size: 14vmin;
+            position: absolute;
+            bottom: 2vh;
+            right: 8vw;
+        }
+        @media (min-width: @screen-md-min) {
+            h1 {
+                font-size: 10vmin;
+            }
+        }
+    }
+    .content {
+        .row {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            .dc-item {
+                text-align: center;
+                img {
+                    /*max-width: 100%;*/
+                }
+            }
+        }
+        @media (min-width: @screen-md-min) {
+            .dc-text {
+                float: right;
+            }
+        }
+        @media (min-width: @screen-lg-min) {
+            .row {
+                max-width: 80vw;
+                margin: auto auto;
+            }
+        }
+    }
+}
+
+.about {
+    .header {
         h1 {
             font-weight: 400;
             font-size: 12vmin;
@@ -257,46 +316,6 @@ h2 {
                 a {
                     font-size: 2vw;
                 }
-            }
-        }
-    }
-}
-
-.uidesign, .printdesign, .artwork, .process {
-    .header {
-        min-height: 305px;
-        position: relative;
-        .splash {
-            height: 100vmin;
-            max-height: 70vh;
-            width: 90%;
-            margin: 30px auto;
-            position: relative;
-        }
-        h1 {
-            font-size: 14vmin;
-            position: absolute;
-            bottom: 2vh;
-            right: 8vw;
-        }
-        @media (min-width: @screen-md-min) {
-            h1 {
-                font-size: 10vmin;
-            }
-        }
-    }
-    .content {
-        .row {
-            padding-top: 40px;
-            padding-bottom: 40px;
-            .dc-item {
-                text-align: center;
-                img{max-width: 100%;}
-            }
-        }
-        @media (min-width: @screen-md-min) {
-            .dc-text {
-                float: right;
             }
         }
     }
