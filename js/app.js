@@ -10,8 +10,8 @@ $(function() {
         'html-graph': 10,
         'css-graph': 10,
         'jquery-graph': 5,
-        'bootstrap-graph': 3,
-        'js-graph': 2,
+        'bootstrap-graph': 5,
+        'js-graph': 4,
         'angularjs': 2
     };
     
